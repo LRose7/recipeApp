@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yum Yum Goodie</title>
+    <link rel="shortcut icon" href="./images/recipeLogo.png" type="image/x-icon">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+          </label>
+          <em>Enable Dark Mode!</em>
+        </div>
+        </nav>
+    <section>
+    <div class="container initial">
+            <h1 class="brand"><img src="./images/recipeLogo.png" alt="logo" class="logo"> Yum Yum Goodie </h1>
+        <form onsubmit="fetchAPI()" >
+        <div class="search-input">
+            <input type="text" placeholder="Search For Your Recipe..."> 
+        </div>
+        <div class="search-btn">
+            <button type="submit">search</button>
+        </div>
+        </form>
+        <div class="search-result">
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-bottom">&copy; 2020 Copyright Yum Yum Goodie. All Rights Reserved.</div>
+</footer>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

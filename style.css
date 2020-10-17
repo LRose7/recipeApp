@@ -1,0 +1,321 @@
+:root {
+    --primary-color:rgb(24, 82, 24);
+    --secondary-color:rgb(50, 214, 50);
+    --font-color:rgb(31, 30, 30);
+    --background-color:whitesmoke;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color:rgb(24, 82, 24);
+    --secondary-color:rgb(50, 214, 50);
+    --font-color:whitesmoke;
+    --background-color:rgb(31, 30, 30);
+  }
+  
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  .logo {
+      width: 30px;
+      height: auto;
+  }
+  
+  img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  html {
+      font-size: 12px;
+  }
+  
+  section {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 0;
+      background-color: var(--background-color);
+  }
+  
+  nav {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding-top: 20px;
+    padding-right: 20px;
+  }
+  
+  /*Simple css to style it like a toggle switch*/
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: rgb(31, 30, 30);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: rgb(95, 92, 92);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--primary-color);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+  .container {
+      width: 100%;
+      height: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  
+  .brand {
+      text-align: center;
+      font-size: 3rem;
+      color: var(--font-color);
+      margin-bottom: 30px;
+  }
+  
+  form {
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .search-input input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid rgb(31, 30, 30);
+      outline: none;
+      font-size: .2rem;
+      background-color: rgb(175, 171, 171);
+      display: inline-block;
+  }
+  
+  .search-input input::placeholder {
+      font-size: 1.2rem;
+      color: rgb(31, 30, 30);
+  }
+  
+  .search-btn {
+      display: flex;
+      align-content: center;
+  }
+  
+  button {
+      border-radius: 4px;
+      cursor: pointer;
+      background: rgb(24, 82, 24);
+      border: 0 none;
+      display: inline-block;
+      padding: 7px 10px;
+      width: 100%;
+      color: whitesmoke;
+      font-size: 1.5rem;
+      margin-left: 20px;
+  }
+  
+  .search-result {
+      margin-top: 50px;
+      width: 100%;
+      display: grid;
+      grid-gap: 25px;
+      grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+    }
+  
+    .item h1 {
+        color:  rgb(24, 82, 24);
+    }
+  
+    .item {
+      width: 100%;
+      border-radius: 8px;
+      background-color: var(--background-color);
+      padding: 15px;
+      overflow: hidden;
+    }
+    .item img {
+      width: 100%;
+      height: 300px;
+      border-radius: 4px;
+    }
+    .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .search-result .title {
+      color:  var(--primary-color);
+      margin: 20px 10px 0 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    .view-btn {
+      text-decoration: none;
+      text-align: center;
+      width: 130px;
+      padding: 10px 0;
+      background-color: #404041;
+      color: whitesmoke;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 20px;
+      border-radius: 4px;
+      align-self: flex-start;
+    }
+    .item-data {
+      color: var(--font-color);
+      display: block;
+      margin-top: 10px;
+      font-size: 1.4rem;
+      letter-spacing: 0.05rem;
+      line-height: 2rem;
+    }
+    .container.initial .brand {
+      font-size: 7rem;
+    }
+    .container.initial form {
+      max-width: 800px;
+    }
+    .container.initial form input {
+      padding: 20px;
+      font-size: 3rem;
+    }
+  
+    .search-result {
+      grid-gap: 10px;
+    }
+    .container.initial .brand {
+      font-size: 3rem;
+    }
+    .container.initial form {
+      max-width: 500px;
+    }
+    .container.initial form input {
+      padding: 10px;
+      font-size: 2rem;
+    }
+  
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: var(--font-color);
+      background-color: var(--background-color);
+      padding-bottom: 20px;
+    }
+  
+    /* Media Queries */
+    /* Tablet */
+  
+    @media (min-width: 768px) {
+      button {
+          padding: 7px 30px;
+          font-weight: bold;
+          letter-spacing: 2px;
+      }
+  
+      .container.initial .brand {
+          font-size: 5rem;
+      }
+  
+      /* .brand {
+          text-align: center;
+          font-size: 4rem;
+          color: whitesmoke;
+          margin-bottom: 30px;
+      } */
+  
+      .search-input input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 4px;
+          outline: none;
+          font-size: 2rem;
+          display: inline-block;
+      }
+  
+      .search-input input::placeholder {
+          font-size: 2rem;
+      }
+  
+  
+     .logo {
+          width: 50px;
+          height: auto;
+      }
+  }
+  
+    /* Desk Top*/
+    @media (min-width: 1200px) {
+      button {
+          padding: 7px 40px;
+          font-size: 2rem;
+          
+      }
+  
+      .container.initial .brand {
+          font-size: 6rem;
+      }
+    }
+    
+      
+  
